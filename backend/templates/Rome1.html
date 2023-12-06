@@ -1,0 +1,263 @@
+<!-- templates/send_email.html -->
+    
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Travel Website</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+   
+
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="{% static 'bootstrap.min.css' %}">
+
+    
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+
+<body>
+    <div class="container-xxl bg-white p-0">
+
+        <!-- Header Start -->
+      
+                    <nav class="navbar navbar-expand-lg bg-dark navbar-dark p-3 p-lg-0">
+                        <a href="index.html" class="navbar-brand d-block d-lg-none">
+                            <h1 class="m-0 text-primary text-uppercase"></h1>
+                        </a>
+                        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                            <div class="navbar-nav mr-auto py-0">
+                                <a href="{% url 'Kashmir' %}" class="nav-item nav-link active">Home</a>
+                                <a href="{% url 'review_list' %}" class="nav-item nav-link">Review</a>
+                            
+                                <div class="nav-item dropdown">
+                                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Destination</a>
+                                    <div class="dropdown-menu rounded-0 m-0">
+                                        <a href="{% url 'Kashmir' %}" class="dropdown-item">Kashmir</a>
+                                        <a href="{% url 'Rome' %}" class="dropdown-item">Rome</a>
+                                        <a href="{% url 'Paris' %}" class="dropdown-item">Paris</a>
+                        
+                                
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <!-- Header End -->
+        <section class="locations" id="locations">
+            <div class="text">
+                <h2>Essentials in ROME</h2>
+            </div>
+            <div class="package-title">
+                <h2>STAY</h2>
+            </div>
+        
+            <div class="location-content">
+                
+                <a href="https://jkroma.com/" target="_blank"><div class="col-content">
+                    <img src="https://jkroma.com/wp-content/themes/startup_pro/images/home/imgFull_bg2/1_lg.jpg" style="width: 300px; height: 200px" alt="">
+                    <h5>JK Place Roma</h5>
+                </div></a>
+        
+               
+        
+                <a href="https://www.marriott.com/en-us/hotels/romxr-the-st-regis-rome/overview/" target="_blank"><div class="col-content">
+                    <img src="https://cache.marriott.com/marriottassets/marriott/ROMXR/romxr-main-hall-1393-hor-wide.jpg?interpolation=progressive-bilinear&downsize=1440px:*" style="width: 300px; height: 200px" alt="">
+                    <h5>The St.Regis Rome</h5>
+                </div></a>
+        
+               
+        
+            </div>
+        </section>
+        
+        <section class="locations" id="locations">
+            <div class="package-title">
+                <h2>EAT</h2>
+            </div>
+        
+            <div class="location-content">
+                
+                <a href="https://www.giolitti.it/stores/?lang=en" target="_blank"><div class="col-content">
+                    <img src="https://media-cdn.tripadvisor.com/media/photo-s/01/ae/ba/f7/giolitti.jpg" style="width: 300px; height: 200px" alt="">
+                    <h5>Giolitti</h5>
+                </div></a>
+        
+               
+        
+                <a href="https://romecavalieri.com/la-pergola/" target="_blank"><div class="col-content">
+                    <img src="https://tse1.mm.bing.net/th?id=OIP.Lj6b6659exlyBnJcU7cEuQHaEK&pid=Api&P=0&h=220" style="width: 300px; height: 200px" alt="">
+                    <h5>La Pergola</h5>
+                    
+                </div></a>
+        
+               
+        
+            </div>
+        </section>
+        
+        <section class="locations" id="locations">
+            <div class="package-title">
+                <h2>Things to do</h2>
+            </div>
+        
+            <div class="location-content">
+                
+                <a><div class="col-content">
+                    <img src="https://tse1.mm.bing.net/th?id=OIP.yM4W_q1W1RCzwh5pgtR_kQHaEK&pid=Api&P=0&h=220" style="width: 300px; height: 200px" alt="">
+                    <h5>Vatican City and St. Peter's Basilica</h5>
+                </div></a>
+        
+               
+        
+                <a><div class="col-content">
+                    <img src="https://media.cntraveler.com/photos/58da7b6e1021b64be09794da/master/pass/GettyImages-177303568.jpg" style="width: 300px; height: 200px" alt="">
+                    <h5>Colosseum</h5>
+                </div></a>
+        
+               
+        
+            </div>
+        </section>
+        
+        <section class="package" id="package">
+            <div class="package-title">
+                <h2>Packages</h2>
+            </div>
+        
+            <div class="package-content">
+                
+                <div class="box">
+                    <div class="image">
+                        <img src="" alt="">
+                        <h3>Rs.9,999/-</h3>
+                    </div>
+                
+                <div class="dest-content">
+                    <a href="{% url 'Rometrip' %}"><div class="location">
+                        <h4>Bronze</h4>
+                        <ul class="pac-details">
+                            <li>2 Star Hotel</li>
+                            <li>5 Nights Stay</li>
+                            <li>Free photo Session</li>
+                            <li>Friendly Tour Guide</li>
+                            <li>24/7 Customer Help Center</li>
+                        </ul>
+                    </div>
+                </div>
+                </div>
+                
+                <div class="box">
+                    <div class="image">
+                        <img src="" alt="">
+                        <h3>Rs.19,999/-</h3>
+                    </div>
+                
+                <div class="dest-content">
+                    <div class="location">
+                        <h4>Silver</h4>
+                        <ul class="pac-details">
+                            <li>3 Star Hotel</li>
+                            <li>7 Nights Stay</li>
+                            <li>Free photo Session</li>
+                            <li>Friendly Tour Guide</li>
+                            <li>24/7 Customer Help Center</li>
+                        </ul>
+                    </div>
+                </div>
+                </div>
+        
+                
+                <h1>Submit a Review</h1>
+                <form method="post" action="{% url 'submit_review' %}">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit">Write Review</button>
+                </form>
+        
+
+        <!-- Carousel Start -->
+       
+        <!-- Carousel End -->
+
+
+        <!-- Booking Start -->
+       
+        
+        
+        
+                
+        <!-- Booking End -->
+
+
+        <!-- About Start -->
+        
+        <!-- About End -->
+
+
+        <!-- Room Start -->
+      
+        <!-- Room End -->
+
+
+        <!-- Video Start -->
+       
+        <!-- Service End -->
+
+
+        <!-- Testimonial Start -->
+       
+        <!-- Team End -->
+
+
+        <!-- Newsletter Start -->
+       
+        <!-- Newsletter Start -->
+        
+
+        <!-- Footer Start -->
+      
+        <!-- Footer End -->
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+
+</body>
+
+</html>
+
+
+

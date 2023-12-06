@@ -1,0 +1,284 @@
+<!-- templates/send_email.html -->
+    
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Travel Website</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+   
+
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="{% static 'bootstrap.min.css' %}">
+
+    
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+
+<body>
+    <div class="container-xxl bg-white p-0">
+
+        <!-- Header Start -->
+      
+                    <nav class="navbar navbar-expand-lg bg-dark navbar-dark p-3 p-lg-0">
+                        <a href="index.html" class="navbar-brand d-block d-lg-none">
+                            <h1 class="m-0 text-primary text-uppercase"></h1>
+                        </a>
+                        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                            <div class="navbar-nav mr-auto py-0">
+                                <a href="{% url 'Kashmir' %}" class="nav-item nav-link active">Home</a>
+                                <a href="{% url 'review_list' %}" class="nav-item nav-link">Review</a>
+                            
+                                <div class="nav-item dropdown">
+                                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Destination</a>
+                                    <div class="dropdown-menu rounded-0 m-0">
+                                        <a href="{% url 'Kashmir' %}" class="dropdown-item">Kashmir</a>
+                                        <a href="{% url 'Rome' %}" class="dropdown-item">Rome</a>
+                                        <a href="{% url 'Paris' %}" class="dropdown-item">Paris</a>
+                        
+                                
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <!-- Header End -->
+
+
+        <!-- Carousel Start -->
+       
+        <!-- Carousel End -->
+
+
+        <!-- Booking Start -->
+       
+        <section class="location-section">
+            <div class="location-heading">
+                <h1>Discover The <span>Beautiful World</span></h1>
+            </div>
+         <div class="location-detail" id="kashmir">
+            <h1>Kashmir</h1>
+            <p>Heaven on Earth Kashmir is one of the most beautiful travel destinations to visit in North India. Nowhere in India you will behold the scenic landscapes, icy glaciers, pristine lakes and lofty mountains as beautiful as Kashmir. Serenity and Tranquility redefines itself from the ambiance of Kashmir. Be it summer, Winter or Monsoon, every season has its own charm in Kashmir. The numerous wonders of nature, culture, cuisines and rich history of Kashmir will elevate your travel experience in Incredible India.</p>
+            <div class="location-img">
+                <img src="./files/KASHMIR.png" alt="">
+            </div>
+         </div>
+        
+         <!-- Locations -->
+        
+        <section class="locations" id="locations">
+            <div class="text">
+                <h2>Essentials in Kashmir</h2>
+            </div>
+            <div class="package-title">
+                <h2>STAY</h2>
+            </div>
+        
+            <div class="location-content">
+                
+                <a href="https://www.vivantahotels.com/en-in/dal-view-srinagar/?utm_source=google&utm_medium=local&utm_campaign=vivanta_dal_view_cla&utm_content=vivanta_dal_view_gmb" target="_blank"><div class="col-content">
+                    <img src="https://lh3.googleusercontent.com/gps-proxy/AFm_dcTKd8vfg6RAaLo678yyMWLfk-s3JPRVPnqJPRsIyIKgm7uK4toHeAFour_eQ1ETnNl4D8zJNDSDFSMpxjpysZihZ87vdekJ2Cu6okZQZRbXCYS6Tn0KPrg4--7udquPlPqR5Wpxn7ceMdkkT0IZP6diHEBLYxllLJU6i_Y5JUzSipqWyQ625HUuPQ=w574-h384-n-k-no-v1-rj" style="width: 300px; height: 200px" alt="">
+                    <h5>Vivanta Dal View, Srinagar</h5>
+                </div></a>
+        
+               
+        
+                <a href="http://www.thelalit.com/the-lalit-srinagar/" target="_blank"><div class="col-content">
+                    <img src="https://lh3.googleusercontent.com/p/AF1QipNC6IrIU1hGYbDm-ye6NbvJdJVTCdXRlZ21YEvz=w574-h384-n-k-no-v1-rj" style="width: 300px; height: 200px" alt="">
+                    <h5>The LaLiT Grand Palace Srinagar</h5>
+                </div></a>
+        
+               
+        
+            </div>
+        </section>
+        
+        <section class="locations" id="locations">
+            <div class="package-title">
+                <h2>EAT</h2>
+            </div>
+        
+            <div class="location-content">
+                
+                <a href="" target="_blank"><div class="col-content">
+                    <img src="https://lh5.googleusercontent.com/p/AF1QipPVU4dy9suAqb8Bdfhd6Lt85Lod9TOOEjpaXn-r=w260-h175-n-k-no" style="width: 300px; height: 200px" alt="">
+                    <h5>Bistro Boulevard by Pincer Foods</h5>
+                </div></a>
+        
+               
+        
+                <a href="https://www.facebook.com/taocaferestaurant/" target="_blank"><div class="col-content">
+                    <img src="https://lh3.googleusercontent.com/p/AF1QipMwQLAb_Mt01HRflioIzUkuZFkRKdtoVpGCkRXS=s1360-w1360-h1020" style="width: 300px; height: 200px" alt="">
+                    <h5>Tao restaurant & café</h5>
+                    
+                </div></a>
+        
+               
+        
+            </div>
+        </section>
+        
+        <section class="locations" id="locations">
+            <div class="package-title">
+                <h2>Things to do</h2>
+            </div>
+        
+            <div class="location-content">
+                
+                <a><div class="col-content">
+                    <img src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/06/6c/7e/97.jpg" style="width: 300px; height: 200px" alt="">
+                    <h5>Gulmarg Trip</h5>
+                </div></a>
+        
+               
+        
+                <a><div class="col-content">
+                    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0a/fb/3a/19/shankaracharya-temple.jpg?w=1000&h=-1&s=1" style="width: 300px; height: 200px" alt="">
+                    <h5>Shankaracharya Hill</h5>
+                </div></a>
+        
+               
+        
+            </div>
+        </section>
+        
+        <section class="package" id="package">
+            <div class="package-title">
+                <h2>Packages</h2>
+            </div>
+        
+            <div class="package-content">
+                
+                <div class="box">
+                    <div class="image">
+                        <img src="" alt="">
+                        <h3>Rs.9,999/-</h3>
+                    </div>
+                
+                <div class="dest-content">
+                    <a href="{% url 'Kashmirtrip' %}"><div class="location">
+                        <h4>Bronze</h4>
+                        <ul class="pac-details">
+                            <li>2 Star Hotel</li>
+                            <li>5 Nights Stay</li>
+                            <li>Free photo Session</li>
+                            <li>Friendly Tour Guide</li>
+                            <li>24/7 Customer Help Center</li>
+                        </ul>
+                    </div>
+                </div>
+                </div>
+                
+                <div class="box">
+                    <div class="image">
+                        <img src="" alt="">
+                        <h3>Rs.19,999/-</h3>
+                    </div>
+                
+                <div class="dest-content">
+                    <a href="{% url 'Kashmirtrip1' %}"></a><div class="location">
+                        <h4>Silver</h4>
+                        <ul class="pac-details">
+                            <li>3 Star Hotel</li>
+                            <li>7 Nights Stay</li>
+                            <li>Free photo Session</li>
+                            <li>Friendly Tour Guide</li>
+                            <li>24/7 Customer Help Center</li>
+                        </ul>
+                    </div>
+                </div>
+                </div>
+        
+               
+        
+               
+        
+            </div>
+            <h1>Email Sender</h1>
+        
+            <form method="post" action="{% url 'send_email' %}">
+                {% csrf_token %}
+                
+                <!-- Add an email field -->
+                <label for="recipient_email">Recipient Email:</label>
+                <input type="email" name="recipient_email" required>
+                
+                <button type="submit">Send Email</button>
+            </form>
+        
+                
+        <!-- Booking End -->
+
+
+        <!-- About Start -->
+        
+        <!-- About End -->
+
+
+        <!-- Room Start -->
+      
+        <!-- Room End -->
+
+
+        <!-- Video Start -->
+       
+        <!-- Service End -->
+
+
+        <!-- Testimonial Start -->
+       
+        <!-- Team End -->
+
+
+        <!-- Newsletter Start -->
+       
+        <!-- Newsletter Start -->
+        
+
+        <!-- Footer Start -->
+      
+        <!-- Footer End -->
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+
+</body>
+
+</html>
+
+
+

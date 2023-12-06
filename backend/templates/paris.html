@@ -1,0 +1,265 @@
+
+
+<!-- templates/send_email.html -->
+    
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Travel Website</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+   
+
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="{% static 'bootstrap.min.css' %}">
+
+    
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+
+<body>
+    <div class="container-xxl bg-white p-0">
+
+        <!-- Header Start -->
+      
+                    <nav class="navbar navbar-expand-lg bg-dark navbar-dark p-3 p-lg-0">
+                        <a href="index.html" class="navbar-brand d-block d-lg-none">
+                            <h1 class="m-0 text-primary text-uppercase"></h1>
+                        </a>
+                        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                            <div class="navbar-nav mr-auto py-0">
+                                <a href="{% url 'Kashmir' %}" class="nav-item nav-link active">Home</a>
+                                <a href="{% url 'review_list' %}" class="nav-item nav-link">Review</a>
+                            
+                                <div class="nav-item dropdown">
+                                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Destination</a>
+                                    <div class="dropdown-menu rounded-0 m-0">
+                                        <a href="{% url 'Kashmir' %}" class="dropdown-item">Kashmir</a>
+                                        <a href="{% url 'Rome' %}" class="dropdown-item">Rome</a>
+                                        <a href="{% url 'Paris' %}" class="dropdown-item">Paris</a>
+                        
+                                
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <!-- Header End -->
+
+
+        <!-- Carousel Start -->
+       
+        <!-- Carousel End -->
+
+
+        <!-- Booking Start -->
+       
+        <section class="locations" id="locations">
+            <div class="text">
+                <h2>Essentials in PARIS</h2>
+                <p>Paris, the city of life, love, and light. From the Eiffel Tower to the Mona Lisa, from the bustling Champs Elysées to the winding streets of Montmartre, you'll find magic, romance, and history as you sip a café au lait, stroll manicured parks, and watch the sun set over the Seine. The home to some 2 million people, Paris could take you multiple lifetimes to explore from top to bottom—and that's not counting the Louvre. </p>
+            </div>
+            <div class="package-title">
+                <h2>STAY</h2>
+            </div>
+        
+            <div class="location-content">
+                
+                <a href="https://hoteleurope.net/" target="_blank"><div class="col-content">
+                    <img src="https://lh3.googleusercontent.com/p/AF1QipP3MKqtxESxR7xR7aOgg3sr5U_9AnHAMWgsZxbR=w574-h384-n-k-no-v1-rj" style="width: 300px; height: 200px" alt="">
+                    <h5>Hôtel Europe Saint-Séverin</h5>
+                </div></a>
+        
+               
+        
+                <a href="https://www.hotel-la-lanterne.com/" target="_blank"><div class="col-content">
+                    <img src="https://lh5.googleusercontent.com/p/AF1QipMzNM58Ybn85lEWcpmU-D0RJUu6Bh_YfKCziaXz=w253-h168-k-no" style="width: 300px; height: 200px" alt="">
+                    <h5>Hotel La Lanterne & Spa</h5>
+                </div></a>
+        
+               
+        
+            </div>
+        </section>
+        
+        <section class="locations" id="locations">
+            <div class="package-title">
+                <h2>EAT</h2>
+            </div>
+        
+            <div class="location-content">
+                
+                <a href="https://www.guysavoy.com/" target="_blank"><div class="col-content">
+                    <img src="https://lh3.googleusercontent.com/p/AF1QipO4OY5Ta70pKfwGt6eOQNffUdtDvkuB4JM2-cW5=s1360-w1360-h1020" style="width: 300px; height: 200px" alt="">
+                    <h5>Restaurant Guy Savoy</h5>
+                </div></a>
+        
+               
+        
+                <a href="https://www.peninsula.com/en/paris/hotel-fine-dining/french-rooftop-loiseau-blanc" target="_blank"><div class="col-content">
+                    <img src="https://lh3.googleusercontent.com/p/AF1QipOH5sdYYl7Bv3VSZGIyROArXEnx09sSAEJd57VM=s1360-w1360-h1020" style="width: 300px; height: 200px" alt="">
+                    <h5>L'Oiseau Blanc</h5>
+                    
+                </div></a>
+        
+               
+        
+            </div>
+        </section>
+        
+        <section class="locations" id="locations">
+            <div class="package-title">
+                <h2>Things to do</h2>
+            </div>
+        
+            <div class="location-content">
+                
+                <a><div class="col-content">
+                    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/26/b3/6e/20180601-122841-largejpg.jpg?w=1000&h=-1&s=1" style="width: 300px; height: 200px" alt="">
+                    <h5>Musée d'Orsay</h5>
+                </div></a>
+        
+               
+        
+                <a><div class="col-content">
+                    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/9e/7f/9d/eiffeltoren.jpg?w=1000&h=800&s=1" style="width: 300px; height: 200px" alt="">
+                    <h5>Eiffel Tower</h5>
+                </div></a>
+        
+               
+        
+            </div>
+        </section>
+        
+        <section class="package" id="package">
+            <div class="package-title">
+                <h2>Packages</h2>
+            </div>
+        
+            <div class="package-content">
+                
+                <div class="box">
+                    <div class="image">
+                        <img src="" alt="">
+                        <h3>Rs.9,999/-</h3>
+                    </div>
+                
+                <div class="dest-content">
+                    <a href="{% url 'Paristrip' %}"><div class="location">
+                        <h4>Bronze</h4>
+                        <ul class="pac-details">
+                            <li>2 Star Hotel</li>
+                            <li>5 Nights Stay</li>
+                            <li>Free photo Session</li>
+                            <li>Friendly Tour Guide</li>
+                            <li>24/7 Customer Help Center</li>
+                        </ul>
+                    </div>
+                </div>
+                </div>
+                
+                <div class="box">
+                    <div class="image">
+                        <img src="" alt="">
+                        <h3>Rs.19,999/-</h3>
+                    </div>
+                
+                <div class="dest-content">
+                    <a href="{% url 'Paristrip' %}"></a><div class="location">
+                        <h4>Silver</h4>
+                        <ul class="pac-details">
+                            <li>3 Star Hotel</li>
+                            <li>7 Nights Stay</li>
+                            <li>Free photo Session</li>
+                            <li>Friendly Tour Guide</li>
+                            <li>24/7 Customer Help Center</li>
+                        </ul>
+                    </div>
+                </div>
+                </div>
+        
+                
+                <h1>Submit a Review</h1>
+                <form method="post" action="{% url 'submit_review' %}">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit">Write Review</button>
+                </form>
+        
+        
+                
+        <!-- Booking End -->
+
+
+        <!-- About Start -->
+        
+        <!-- About End -->
+
+
+        <!-- Room Start -->
+      
+        <!-- Room End -->
+
+
+        <!-- Video Start -->
+       
+        <!-- Service End -->
+
+
+        <!-- Testimonial Start -->
+       
+        <!-- Team End -->
+
+
+        <!-- Newsletter Start -->
+       
+        <!-- Newsletter Start -->
+        
+
+        <!-- Footer Start -->
+      
+        <!-- Footer End -->
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+
+</body>
+
+</html>
+
+
+

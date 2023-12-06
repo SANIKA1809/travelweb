@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rome tour </title>
+    <!-- Include the Google Maps JavaScript API with your API key -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
+    <style>
+        /* Set the size of the map container */
+        #map {
+            height: 400px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Rome 4 Days Tour </h1>
+    <p>Experience the ultimate Rome city break with our perfectly planned holiday package. Let us take care of the details so you can fully enjoy all the attractions and activities the city has to offer. Whether you're seeking to discover the rich cultural heritage of Rome or indulge in its delicious culinary scene, our holiday package has got you covered. Join us and discover the enchanting beauty of Rome, Italy!
+    </p>
+    <div id="map"></div>
+
+    <script>
+        // Function to initialize the map
+        function initMap() {
+            // Coordinates for Kashmir (you can adjust this as needed)
+            var kashmirCoords = { lat: 41.9028, lng: 12.4964 };
+
+            // Create a map centered at the specified coordinates
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 12, // Adjust the initial zoom level as needed
+                center: kashmirCoords
+            });
+
+            // Add a marker with a pin at a specific location in Kashmir
+            var marker = new google.maps.Marker({
+                position: { lat: 41.8902, lng: 12.4922 }, // Replace with the desired coordinates
+                map: map,
+                title: 'Colosseum' // Replace with the desired title
+            });
+            var marker = new google.maps.Marker({
+                position: { lat: 41.8986, lng: 12.4769 }, // Replace with the desired coordinates
+                map: map,
+                title: 'Pantheon' // Replace with the desired title
+            });
+            var marker = new google.maps.Marker({
+                position: { lat: 41.9009, lng: 12.4833 }, // Replace with the desired coordinates
+                map: map,
+                title: 'Trevi Fountain' // Replace with the desired title
+            });
+
+            // You can add more markers by repeating the above code with different coordinates and titles
+        }
+    </script>
+
+    <!-- Call the initMap function when the page loads -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQaBNEwzGu9A2Yc8wBN6bl91_YHkHjx2A&callback=initMap"></script>
+    <h1>Register trip</h1>
+
+    <form method="post" action="{% url 'send_email' %}">
+        {% csrf_token %}
+        
+        <!-- Add an email field -->
+        <label for="recipient_email">Recipient Email:</label>
+        <input type="email" name="recipient_email" required>
+        
+        <button type="submit">Send Email</button>
+</body>
+</html>

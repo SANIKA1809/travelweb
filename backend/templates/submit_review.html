@@ -1,0 +1,8 @@
+<!-- templates/submit_review.html -->
+
+<h1>Submit a Review</h1>
+<form method="post" action="{% url 'submit_review' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Submit Review</button>
+</form>

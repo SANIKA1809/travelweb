@@ -1,0 +1,287 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #D6EEEE;
+        }
+    </style>
+    <meta charset="utf-8">
+    <title>Travel Website</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+   
+
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="{% static 'bootstrap.min.css' %}">
+
+    
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+
+<body>
+    <div class="container-xxl bg-white p-0">
+
+        <!-- Header Start -->
+      
+                    <nav class="navbar navbar-expand-lg bg-dark navbar-dark p-3 p-lg-0">
+                        <a href="index.html" class="navbar-brand d-block d-lg-none">
+                            <h1 class="m-0 text-primary text-uppercase"></h1>
+                        </a>
+                        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                            <div class="navbar-nav mr-auto py-0">
+                                <a href="{% url 'Kashmir' %}" class="nav-item nav-link active">Home</a>
+                                <a href="{% url 'review_list' %}" class="nav-item nav-link">Review</a>
+                            
+                                <div class="nav-item dropdown">
+                                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Destination</a>
+                                    <div class="dropdown-menu rounded-0 m-0">
+                                        <a href="{% url 'Kashmir' %}" class="dropdown-item">Kashmir</a>
+                                        <a href="{% url 'Rome' %}" class="dropdown-item">Rome</a>
+                                        <a href="{% url 'Paris' %}" class="dropdown-item">Paris</a>
+                        
+                                
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <!-- Header End -->
+
+
+        <!-- Page Header Start -->
+        
+        <!-- Page Header End -->
+
+        <!-- Room Start -->
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                    <span class="section-title text-center text-primary text-uppercase"> </span>
+                </div>
+
+                {% for city in cities %}
+                <div class="row g-4">
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="room-item shadow rounded overflow-hidden">
+                            <div class="position-relative">
+                                <img class="img-fluid" src="img/room-1.jpg" alt="">
+                                <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">$100/Night</small>
+                            </div>
+                            <div class="p-4 mt-2">
+                                <div class="d-flex justify-content-between mb-3">
+                                    <h5 class="mb-0">{{city.name}}</h5>
+                                    <div class="ps-2">
+                                        {% for i in "x"|rjust:city.ratings %}
+                                        <small class="fa fa-star text-primary"></small>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                                <div class="d-flex mb-3">
+                                    <small class="border-end me-3 pe-3"><i class="fa fa-bed text-primary me-2"></i>3 Hotels</small>
+                                    <small class="border-end me-3 pe-3"><i class="fa fa-bath text-primary me-2"></i>2 Gardens</small>
+                                    <small><i class="fa fa-wifi text-primary me-2"></i>Wifi</small>
+                                </div>
+                                <p class="text-body mb-3">{{city.description |truncatechars:256  }}</p>
+                                <div class="d-flex justify-content-between">
+                                    <a class="btn btn-sm btn-primary rounded py-2 px-4" href="">View Detail</a>
+                                    <a class="btn btn-sm btn-dark rounded py-2 px-4" href="">Book Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+
+                <!-- <table id="editableTable " style="width:90%">
+                    <thead>
+                        <tr>
+                            <th style="width:30%;">Date</th>
+                            <th style="width:70%;">Activity</th>
+                            <th style="width:10%;">Submit</th>
+                        </tr>
+                    </thead>
+                    {% for item in itinerary %}
+
+                    <tbody>
+                        <tr>
+                            <td>{{item.day}}</td>
+                            <td contenteditable='true'>{{item.activity}}</td>
+                                <td>
+                                    <i id="updateButton"  class="updateButton fa fa-save"  data-id="{{ item.id }}" data-activity="{{ item.activity }}"  style="font-size:24px"></i>
+                                    </form> 
+                                    <i id="deleteButton" class="deleteButton fa fa-trash" data-id="{{ item.id }}" style="font-size:24px"></i>
+                                    <button class="deleteButton" data-id="{{ item.id }}">Delete</button>
+                                </td>
+                            
+                        </tr>
+                    {% endfor %}
+                  </table> -->
+
+
+                  <table id="editableTable">
+                    <thead>
+                        <tr>
+                            <th style="width:30%;">Date</th>
+                            <th style="width:70%;">Activity</th>
+                            <th style="width:10%;">Submit</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for item in itinerary %}
+                            <tr id="row{{ item.id }}">   
+                                <td>{{item.day}}</td>
+                                <td contenteditable="true">{{item.activity}}</td>
+                                <td>
+                                    <i id="updateButton"  class="updateButton fa fa-save" data-index="{{ forloop.counter0 }}"  data-id="{{ item.id }}" data-activity="{{ item.activity }}"  style="font-size:24px"></i>
+                                    </form> 
+                                    <i id="deleteButton" class="deleteButton fa fa-trash" data-id="{{ item.id }}" style="font-size:24px"></i>
+                                    <!-- <button class="deleteButton" data-id="{{ item.id }}">Delete</button> -->
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+
+                <button id="saveChangesButton">Save Changes</button>
+                
+
+
+            </div>
+        </div>
+        <!-- Room End -->
+
+
+        <!-- Newsletter Start -->
+        
+        <!-- Footer End -->
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Attach a click event listener to all delete buttons
+            $(".deleteButton").click(function () {
+                // Get the row ID to be deleted
+                var rowId = $(this).data("id");
+
+                console.log(rowId)
+
+                // Remove the row from the table
+                $("#row" + rowId).remove();
+
+                // You can also send an AJAX request to the server to delete the row from the database
+                $.ajax({
+                    url: 'room/delete_row/' + rowId + '/',
+                    type: 'POST',
+                    success: function (data) {
+                        // Handle success if needed
+                    },
+                    error: function () {
+                        // Handle error if needed
+                    }
+                });
+            });
+
+
+            $(".updateButton").click(function () {
+                // Get the row ID to be deleted
+                var rowId = $(this).data("id");
+                var rowActivity = $(this).data("activity");
+
+                var rowIndex = $(this).data("index");
+                var rowData = [];
+
+                // Iterate through each row in the table
+                $("#editableTable tbody tr").each(function () {
+                    
+                    // Iterate through each cell in the row
+                    $(this).find("td[contenteditable='true']").each(function () {
+                        // Get the column name (assumed to be in the same order as the table headers)
+                        var columnName = $(this).closest('tr').find('th').eq($(this).index()).text().toLowerCase();
+
+                        // Get the edited text value
+                        var cellValue = $(this).text().trim();
+                        // Add the data to the row object
+                        rowData[columnName] = cellValue;
+                        rowData.push(cellValue)
+                    });
+                });
+
+                console.log(rowData[rowIndex])
+
+                // You can also send an AJAX request to the server to delete the row from the database
+                $.ajax({
+                    url: 'room/update_row/' + rowId + '/' + rowData[rowIndex] + '/' ,
+                    type: 'POST',
+                    success: function (data) {
+                        // Handle success if needed
+                    },
+                    error: function () {
+                        // Handle error if needed
+                    }
+                });
+
+                // You can also send an AJAX request to the server to delete the row from the database
+                // $.ajax({
+                //     url: 'room/update_row/' + rowId + '/' + rowActivity + '/',
+                //     type: 'POST',
+                //     success: function (data) {
+                //         // Handle success if needed
+                //     },
+                //     error: function () {
+                //         // Handle error if needed
+                //     }
+                // });
+            });
+
+
+        });
+    </script>
+</body>
+
+</html>

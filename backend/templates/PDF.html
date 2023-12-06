@@ -1,0 +1,46 @@
+<!-- your_template.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your PDF Title</title>
+    <style>
+        /* Add any additional styles needed for your PDF */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <h1>Your PDF Content</h1>
+    
+    <table>
+        <thead>
+            <tr>
+                <th style="width:30%;">Date</th>
+                <th style="width:70%;">Activity</th>
+                <!-- You may adjust the column widths as needed -->
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in itinerary %}
+                <tr id="row{{ item.id }}">   
+                    <td>{{ item.day }}</td>
+                    <td>{{ item.activity }}</td>
+                    <!-- Add more columns if needed -->
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <p>Data to be rendered in the PDF: {{ data }}</p>
+    <!-- Add more HTML content as needed -->
+</body>
+</html>
