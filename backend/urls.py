@@ -1,5 +1,5 @@
 from django.urls import path, include
-from .views import review_list, submit_review, send_email, Kashmir, Kashmirtrip, Kashmirtrip1, Rome, Rometrip, Paris, Paristrip, Paristrip1, GeneratePDF, SaveChanges, screenshot_view
+from .views import review_list, submit_review, send_email, Kashmir, Kashmirtrip, Kashmirtrip1, Rome, Rometrip, Paris, Paristrip, Paristrip1
 
 from . import views
 from . import views as main_views

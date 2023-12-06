@@ -23,7 +23,6 @@ from django.views.decorators.csrf import csrf_exempt
 from .serializers import CitySerializer,  ItinerarySerializer
 from .models import City, Itinerary, Planning
 
-
 def index(request):
     return HttpResponse("Hello, world. You're at the polls index.")
 
