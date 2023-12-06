@@ -10,6 +10,8 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
+import os
+import django_heroku
 from pathlib import Path
 
 
@@ -26,7 +28,7 @@ SECRET_KEY = 'django-insecure-8zv(9v&$1#zia8o&=+&_*+p#5rxjxm1pui-*i7)s6e^1bd--n#
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['mysite-app.herokuapp.com']
 
 
 # Application definition
@@ -83,9 +85,11 @@ DATABASES = {
         'OPTIONS': {
             'options': '-c search_path=test1'
         },
-        'NAME': 'postgres',
-        'USER': 'postgres',
-        'PASSWORD': 'Sanika@1809',
+        'NAME': 'dfnjasrsv8rqbp',
+        'USER': 'cngfivevymqycc',
+        'HOST': 'ec2-44-213-228-107.compute-1.amazonaws.com',
+        'PASSWORD': 'c1ea3f9b007b391334f48964e0b0ef728190ca2c01a3b9da7403e2237bb56493',
+        'PORT': '5432',
 },
 }
 
@@ -124,7 +128,15 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = 'static/'
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+# Your other settings...
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_URL = '/static/'
+
+# Activate Django-Heroku.
+django_heroku.settings(locals())
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
