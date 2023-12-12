@@ -9,11 +9,9 @@ https://docs.djangoproject.com/en/4.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
-
 import os
 import django_heroku
 from pathlib import Path
-
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -28,7 +26,7 @@ SECRET_KEY = 'django-insecure-8zv(9v&$1#zia8o&=+&_*+p#5rxjxm1pui-*i7)s6e^1bd--n#
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['mysite-app.herokuapp.com']
+ALLOWED_HOSTS = ['travelweb.herokuapp.com']
 
 
 # Application definition
@@ -45,6 +43,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -82,14 +81,11 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'OPTIONS': {
-            'options': '-c search_path=test1'
-        },
-        'NAME': 'dfnjasrsv8rqbp',
-        'USER': 'cngfivevymqycc',
-        'HOST': 'ec2-44-213-228-107.compute-1.amazonaws.com',
-        'PASSWORD': 'c1ea3f9b007b391334f48964e0b0ef728190ca2c01a3b9da7403e2237bb56493',
-        'PORT': '5432',
+        'NAME': 'ddttkdf1hpub1t',
+        'USER': 'wbkzuniiijblbw',
+        'PASSWORD': '32925b35c9796f0e9059658fd0f222f51b5f9e8354e5bce6684cbb9cea6d3812',
+        'HOST': 'ec2-3-210-173-88.compute-1.amazonaws.com',
+        'PORT': '5432'
 },
 }
 
@@ -128,15 +124,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
-# Your other settings...
-
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATIC_URL = '/static/'
-
-# Activate Django-Heroku.
+STATIC_URL = "static/"
 django_heroku.settings(locals())
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
@@ -145,13 +136,3 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 LOGIN_REDIRECT_URL = "/"
-
-# settings.py
-
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'moresanika18@gmail.com'
-EMAIL_HOST_PASSWORD = 'lmqw umwy zkaz kaop'
-
