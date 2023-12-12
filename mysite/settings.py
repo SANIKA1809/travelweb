@@ -10,8 +10,22 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 import os
-import django_heroku
+import dj_database_url
 from pathlib import Path
+
+from pydantic import PostgresDsn
+
+# settings.py
+
+from decouple import Config, Csv
+
+config = Config()
+config.read_dotenv()
+
+DEBUG = config('DEBUG', default=False, cast=bool)
+SECRET_KEY = config('SECRET_KEY')
+DATABASE_URL = config('DATABASE_URL')
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -78,16 +92,13 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'ddttkdf1hpub1t',
-        'USER': 'wbkzuniiijblbw',
-        'PASSWORD': '32925b35c9796f0e9059658fd0f222f51b5f9e8354e5bce6684cbb9cea6d3812',
-        'HOST': 'ec2-3-210-173-88.compute-1.amazonaws.com',
-        'PORT': '5432'
-},
-}
+import dj_database_url
+# Set the DATABASE_URL string
+DATABASE_URL = "PostgresDsn://wbkzuniiijblbw:32925b35c9796f0e9059658fd0f222f51b5f9e8354e5bce6684cbb9cea6d3812@ec2-3-210-173-88.compute-1.amazonaws.com:5432/ddttkdf1hpub1t"
+
+# Configure DATABASES using dj_database_url
+DATABASES = {'default': dj_database_url.config(default=DATABASE_URL)}
+
 
 
 # Password validation
@@ -124,9 +135,11 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+# ...
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATIC_URL = "static/"
-django_heroku.settings(locals())
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Default primary key field type
